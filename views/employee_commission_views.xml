@@ -1,0 +1,12 @@
+<odoo>
+    <!-- Import menu and action definitions 
+    <include src="views/employee_commission_menu.xml"/>-->
+    
+    <!-- Include views for the commissions -->
+    <record id="employee_commission_views" model="ir.actions.act_window">
+        <field name="name">Employee Commissions</field>
+        <field name="res_model">employee.commission</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_employee_commission_tree"/>
+    </record>
+</odoo>

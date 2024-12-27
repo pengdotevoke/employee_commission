@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+        <!-- Parent Menu Definition -->
+        <record id="menu_employee_commission_root" model="ir.ui.menu">
+            <field name="name">Commissions</field>
+            <field name="parent_id" ref="hr.menu_hr_root"/> <!-- Ensure this parent menu exists -->
+            <field name="sequence" eval="10"/>
+        </record>
+
+        <!-- Action Definition for Employee Commissions -->
+        <record id="action_employee_commission" model="ir.actions.act_window">
+            <field name="name">Employee Commissions</field>
+            <field name="res_model">employee.commission</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new employee commission record.
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu Item Definition -->
+        <record id="menu_employee_commission" model="ir.ui.menu">
+            <field name="name">Employee Commissions</field>
+            <field name="parent_id" ref="menu_employee_commission_root"/> <!-- This should be defined above -->
+            <field name="action" ref="action_employee_commission"/> <!-- Ensure this action exists -->
+        </record>
+    </data>
+</odoo>

@@ -1,15 +1,19 @@
 <odoo>
     <data>
+
         <record id="view_employee_commission_tree" model="ir.ui.view">
             <field name="name">employee.commission.tree</field>
             <field name="model">employee.commission</field>
             <field name="arch" type="xml">
                 <tree>
+                    <field name="status_id"/>
+                    <button name="action_mark_as_paid" type="object" string="Mark as Paid" class="btn-primary"/>
                     <field name="employee_id"/>
-                    <field name="sale_id"/>
                     <field name="pos_order_id"/>
-                    <field name="profit"/>
+                    <field name="sale_amt"/>
+                    <field name="month"/>
                     <field name="commission_amount"/>
+                     <field name="is_paid"/>
                 </tree>
             </field>
         </record>

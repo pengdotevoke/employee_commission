@@ -6,6 +6,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/employee_commission_menu.xml',
+        'views/employee_commission_search.xml',
         'views/employee_commission_tree.xml',
         'views/employee_commission_form.xml',
         'views/employee_commission_views.xml',

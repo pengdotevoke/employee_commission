@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <record id="view_employee_commission_filter" model="ir.ui.view">
+            <field name="name">employee.commission.filter</field>
+            <field name="model">employee.commission</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="month" string="Month"/>
+                    <filter name="filter_january" string="January" domain="[('month', '=', '1')]"/>
+                    <filter name="filter_february" string="February" domain="[('month', '=', '2')]"/>
+                    <filter name="filter_march" string="March" domain="[('month', '=', '3')]"/>
+                    <filter name="filter_april" string="April" domain="[('month', '=', '4')]"/>
+                    <filter name="filter_may" string="May" domain="[('month', '=', '5')]"/>
+                    <filter name="filter_june" string="June" domain="[('month', '=', '6')]"/>
+                    <filter name="filter_july" string="July" domain="[('month', '=', '7')]"/>
+                    <filter name="filter_august" string="August" domain="[('month', '=', '8')]"/>
+                    <filter name="filter_september" string="September" domain="[('month', '=', '9')]"/>
+                    <filter name="filter_october" string="October" domain="[('month', '=', '10')]"/>
+                    <filter name="filter_november" string="November" domain="[('month', '=', '11')]"/>
+                    <filter name="filter_december" string="December" domain="[('month', '=', '12')]"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

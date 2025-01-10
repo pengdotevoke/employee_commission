@@ -11,10 +11,12 @@
                     <sheet>
                         <group>
                             <field name="employee_id"/>
-                            <field name="sale_id"/>
+                            <!--field name="sale_id"/-->
                             <field name="pos_order_id"/> 
-                            <field name="profit"/>
+                            <field name="sale_amt"/>
+                            <field name="month"/>
                             <field name="commission_amount"/>
+                             <field name="is_paid"/>
                         </group>
                     </sheet>
                 </form>

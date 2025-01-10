@@ -6,7 +6,6 @@
             <field name="model">employee.commission</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="status_id"/>
                     <button name="action_mark_as_paid" type="object" string="Mark as Paid" class="btn-primary"/>
                     <field name="employee_id"/>
                     <field name="pos_order_id"/>

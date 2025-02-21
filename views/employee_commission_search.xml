@@ -1,23 +1,37 @@
 <odoo>
     <data>
+        <!-- Employee Commission Search View -->
         <record id="view_employee_commission_filter" model="ir.ui.view">
             <field name="name">employee.commission.filter</field>
             <field name="model">employee.commission</field>
             <field name="arch" type="xml">
                 <search>
-                    <field name="month" string="Month"/>
-                    <filter name="filter_january" string="January" domain="[('month', '=', '1')]"/>
-                    <filter name="filter_february" string="February" domain="[('month', '=', '2')]"/>
-                    <filter name="filter_march" string="March" domain="[('month', '=', '3')]"/>
-                    <filter name="filter_april" string="April" domain="[('month', '=', '4')]"/>
-                    <filter name="filter_may" string="May" domain="[('month', '=', '5')]"/>
-                    <filter name="filter_june" string="June" domain="[('month', '=', '6')]"/>
-                    <filter name="filter_july" string="July" domain="[('month', '=', '7')]"/>
-                    <filter name="filter_august" string="August" domain="[('month', '=', '8')]"/>
-                    <filter name="filter_september" string="September" domain="[('month', '=', '9')]"/>
-                    <filter name="filter_october" string="October" domain="[('month', '=', '10')]"/>
-                    <filter name="filter_november" string="November" domain="[('month', '=', '11')]"/>
-                    <filter name="filter_december" string="December" domain="[('month', '=', '12')]"/>
+                    <!-- Year Filters -->
+                    <filter name="filter_by_year" string="Year">
+                        <filter name="filter_2024" string="2024" domain="[('date', '>=', '2024-01-01'), ('date', '&lt;', '2025-01-01')]"/>
+                        <filter name="filter_2025" string="2025" domain="[('date', '>=', '2025-01-01'), ('date', '&lt;', '2026-01-01')]"/>
+                        <filter name="filter_2026" string="2026" domain="[('date', '>=', '2026-01-01'), ('date', '&lt;', '2027-01-01')]"/>
+                        <filter name="filter_2027" string="2027" domain="[('date', '>=', '2027-01-01'), ('date', '&lt;', '2028-01-01')]"/>
+                        <filter name="filter_2028" string="2028" domain="[('date', '>=', '2028-01-01'), ('date', '&lt;', '2029-01-01')]"/>
+                        <filter name="filter_2029" string="2029" domain="[('date', '>=', '2029-01-01'), ('date', '&lt;', '2030-01-01')]"/>
+                        <filter name="filter_2030" string="2030" domain="[('date', '>=', '2030-01-01'), ('date', '&lt;', '2031-01-01')]"/>
+                    </filter>
+
+                    <!-- Month Filters -->
+                    <filter name="filter_by_month" string="Month">
+                        <filter name="filter_january" string="January" domain="[('month', '=', '1')]"/>
+                        <filter name="filter_february" string="February" domain="[('month', '=', '2')]"/>
+                        <filter name="filter_march" string="March" domain="[('month', '=', '3')]"/>
+                        <filter name="filter_april" string="April" domain="[('month', '=', '4')]"/>
+                        <filter name="filter_may" string="May" domain="[('month', '=', '5')]"/>
+                        <filter name="filter_june" string="June" domain="[('month', '=', '6')]"/>
+                        <filter name="filter_july" string="July" domain="[('month', '=', '7')]"/>
+                        <filter name="filter_august" string="August" domain="[('month', '=', '8')]"/>
+                        <filter name="filter_september" string="September" domain="[('month', '=', '9')]"/>
+                        <filter name="filter_october" string="October" domain="[('month', '=', '10')]"/>
+                        <filter name="filter_november" string="November" domain="[('month', '=', '11')]"/>
+                        <filter name="filter_december" string="December" domain="[('month', '=', '12')]"/>
+                    </filter>
                 </search>
             </field>
         </record>

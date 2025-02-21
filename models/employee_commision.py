@@ -19,7 +19,12 @@ class EmployeeCommission(models.Model):
         store=True
     )
     
-
+    @api.model
+    def get_years(self):
+        """Return a list of years dynamically."""
+        current_year = fields.Date.context_today(self).year
+        return [(str(year), str(year)) for year in range(2024, current_year + 1)]
+    
     @api.depends('pos_order_id.date_order')
     def _compute_month(self):
         for record in self:
